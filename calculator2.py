@@ -1,6 +1,5 @@
 calculation_history = []
 
-
 def calculate(a, b, operator):
     if operator == '+':
         result = a + b
@@ -31,7 +30,6 @@ def show_history():
     print("Последнии операции: ")
     for i, operation in enumerate(calculation_history, 1):
         print(F"{i}. {operation}")
-
 
 if __name__ == "__main__":
     print("=== Умный калькулятор===\n")
