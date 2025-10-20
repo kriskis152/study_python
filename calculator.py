@@ -7,33 +7,36 @@ exit_buttom = False
 history = []
 mod = str(0)
 
-while not exit_buttom :
+while not exit_buttom:
+
     chislo1 = input("Введите перовое число: ")
+    if chislo1 == "Exit":
+        break
     chislo2 = input("Введите второе чило: ")
+    if chislo2 == "Exit":
+        break
     dey = input("Введите действие: ")
-    
+
     if dey == "+" :
-     res = int(chislo1) + int(chislo2)
-     print(F"Ваш ответ:{res}")
-     mod = F"{chislo1} + {chislo2} = {res}"
-     history.append(mod)
+        res = int(chislo1) + int(chislo2)
+        print(F"Ваш ответ:{res}")
+        mod = F"{chislo1} + {chislo2} = {res}"
+        history.append(mod)
     elif dey == "-" :
-     res = int(chislo1) - int(chislo2)
-     print(F"Ваш ответ:{res}")
-     mod = F"{chislo1} - {chislo2} = {res}"
-     history.append(mod)
+        res = int(chislo1) - int(chislo2)
+        print(F"Ваш ответ:{res}")
+        mod = F"{chislo1} - {chislo2} = {res}"
+        history.append(mod)
     elif dey == "*" :
-     res = int(chislo1) * int(chislo2)
-     print(F"Ваш ответ:{res}")
-     mod = F"{chislo1} * {chislo2} = {res}"
-     history.append(mod)
+        res = int(chislo1) * int(chislo2)
+        print(F"Ваш ответ:{res}")
+        mod = F"{chislo1} * {chislo2} = {res}"
+        history.append(mod)
     elif dey == "/" :
-     res = int(chislo1) / int(chislo2) 
-     print(F"Ваш ответ:{res}")
-     mod = F"{chislo1} / {chislo2} = {res}"
-     history.append(mod)
-    elif dey == "Exit" or chislo1 == "Exit" or chislo2 =="Exit": # почему выход срабатывает только на "dey"
-     exit_buttom = True
+        res = int(chislo1) / int(chislo2) 
+        print(F"Ваш ответ:{res}")
+        mod = F"{chislo1} / {chislo2} = {res}"
+        history.append(mod)
+    elif dey == "Exit" or chislo1 == "Exit" or chislo2 == "Exit":  # почему выход срабатывает только на "dey"
+        exit_buttom = True
 print(history)    
-
-
